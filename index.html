@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Balls</title>
+    <link rel="stylesheet" type="text/css" href="st.css">
+    
+</head>
+<body>
+    <h2><center>Sometimes you need to slow down to speed up...........</center></h2>
+    <div class="ball-container">
+        <div class="ball"><span>1</span></div>
+        <div class="ball"><span>2</span></div>
+        <div class="ball"><span>3</span></div>
+        <div class="ball"><span>4</span></div>
+        <div class="ball"><span>5</span></div>
+    </div>
+    <div class="input-container">
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button onclick="checkNumber()">Check Number</button>
+    </div>
+    <div id="clue"></div>
+
+    <script>
+        function checkNumber() {
+            const enteredNumber = parseInt(document.getElementById("numberInput").value);
+            if (enteredNumber === 31542) {
+                document.getElementById("clue").textContent = "Congratulations! You've matched the number!";
+            } else {
+                document.getElementById("clue").textContent = "Try again. The number doesn't match.";
+            }
+        }
+    </script>
+</body>
+</html>
